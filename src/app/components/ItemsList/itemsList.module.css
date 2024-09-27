@@ -1,0 +1,61 @@
+.itemsList {
+    width: 88vw;
+    background-color: #F9FBFC;
+    border: 2px solid #E5E5E5;
+    margin: 2rem 2rem;
+    border-radius: 0.5rem;
+    padding: 4rem 2rem 3rem 4rem;
+
+    .rowHeading {
+        display: flex;
+        margin-bottom: 1rem;
+        color: #637481;
+
+        .itemsIndexDiv {
+            width: 6rem;
+            flex-shrink: 0; 
+        }
+
+        .filterHeading {
+            /* margin-left: 6.2rem; */
+            width: 28.2rem;
+            text-align: center;
+            border-right: 2px solid #E5E5E5;
+            padding: 1rem 0;
+            flex-shrink: 0; 
+            white-space: nowrap;
+        }
+        .variantHeadingDiv{
+            overflow-x: auto;
+            display: flex;
+            width: auto;
+            flex-grow: 1;
+        }
+        .variantHeading {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1rem 1rem 1rem;
+            border-right: 2px solid #E5E5E5;
+            align-items: center;
+            flex-shrink: 0; 
+            width: 14.1rem;
+            white-space: nowrap;
+        }
+
+        .placeholderDiv{
+            min-width: 12rem;
+        }
+    }
+
+    .addIcon {
+        background-color: white;
+        border: 2px solid #E5E5E5;
+        border-radius: 0.3rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

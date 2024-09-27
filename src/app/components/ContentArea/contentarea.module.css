@@ -1,0 +1,52 @@
+.contentarea{
+    height: 100vh;
+    width: 95vw;
+    margin-left: 5vw;
+    .header{
+        height: 20vh;
+        border-bottom: 2px solid #FAFAFA;
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem;
+        .headingDiv{
+            display: flex;
+            width: 100%;
+            padding: 0;
+            gap: 1rem;
+            .icon{
+                display: flex;
+                align-items: center;
+                padding-bottom: 0.5rem;
+            }
+            .heading{
+                border-bottom: 2.5px solid black;
+                width: 25rem;
+            }
+        }
+        
+        .btn {
+            background-color: #02AB52;
+            color: white;
+            text-wrap: nowrap;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: transform 0.1s ease, background-color 0.3s ease;
+        }
+        
+        .btn:active {
+            transform: scale(0.95); 
+            background-color: #028a43; 
+        }
+        
+    }
+
+    .mainContent{
+        height: 80vh;
+        width: 100vw;
+        
+
+    }
+
+}

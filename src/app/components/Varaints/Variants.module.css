@@ -1,0 +1,42 @@
+.imageContainer{
+    padding: 1rem 1rem 1rem 2rem;
+    border-right: 2px solid #E5E5E5;
+    height: 14rem;
+    .itemImageDiv{
+        width: 11rem;
+        height: 12rem;
+        border: 2px dashed #E5E5E5;
+        border-radius: 0.5rem;
+        background-color: white;
+        .img{
+            margin: 1rem 2rem 0 2rem;
+            border-radius: 0.5rem;
+        }
+        .caption{
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 550;
+            padding: 0.1rem 1rem;
+        }
+        .insertIconDiv {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        
+            .insertDisplay {
+                background-color: white;
+                border: 2px solid #E5E5E5;
+                border-radius: 0.3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 0.5rem;
+            }
+        }
+        
+    }
+}
