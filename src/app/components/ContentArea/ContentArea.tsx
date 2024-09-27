@@ -43,7 +43,7 @@ const ContentArea = () => {
                         <MdOutlineArrowBack size={30} />
                     </div>
                     <div className={styles.heading}>
-                        <h1>Catalogue</h1>
+                        <h1>Dashboard</h1>
                     </div>
                 </div>
                 <button className={styles.btn}>
