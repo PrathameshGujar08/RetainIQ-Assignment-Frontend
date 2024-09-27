@@ -1,5 +1,5 @@
 'use client';
-import React , {useState, useEffect} from 'react';
+import React , {useState, } from 'react';
 import { Dialog } from '@headlessui/react';
 import Image from 'next/image';
 import styles from './modal.module.css'; 
