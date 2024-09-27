@@ -5,7 +5,7 @@ import { TbGridDots } from "react-icons/tb";
 import { Product } from '../../../Types/types';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync';
+import { ScrollSyncPane } from 'react-scroll-sync';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { IoAddOutline } from 'react-icons/io5';
 import Variants from '../Varaints/Variants';

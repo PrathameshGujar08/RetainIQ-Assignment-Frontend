@@ -1,5 +1,5 @@
 'use client';
-import React , {useState, } from 'react';
+import React  from 'react';
 import { Dialog } from '@headlessui/react';
 import Image from 'next/image';
 import styles from './modal.module.css'; 
@@ -21,7 +21,7 @@ interface ImageSelectionModalProps {
 
 const Modal: React.FC<ImageSelectionModalProps> = ({ isOpen, onClose, onSelectImage }) => {
 
-    const [images, setImages] = useState<ImageObject[]>(ImageArray);
+    const images : ImageObject[] = ImageArray;
 
     return (
         <Dialog open={isOpen} onClose={onClose} className={styles.modalBackground}>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import styles from './Variants.module.css'
 import Image from 'next/image'
 import { IoAddOutline } from 'react-icons/io5'
@@ -16,7 +16,7 @@ interface VariantProps{
 }
 
 
-const Variants = ({variant, item,index, setProductList, openModal, }: VariantProps) => {
+const Variants = ({variant, index, openModal, }: VariantProps) => {
     
     return (
         <div className={styles.imageContainer}>

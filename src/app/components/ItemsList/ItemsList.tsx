@@ -56,20 +56,6 @@ const ItemsList = ({ productList, setProductList }: ItemsListProps) => {
     setIsNotification(true);
   }, [message])
 
-  const handleColumnAdd = () => {
-    const newVariant = {
-      image: "",
-      caption: ""
-    };
-
-    setProductList((prevProducts) =>
-      prevProducts.map(product => ({
-        ...product,
-        product_variants: [...product.product_variants, newVariant]
-      }))
-    );
-  };
-
   return (
     <div className={styles.itemsList}>
       <div className={styles.rowHeading}>

@@ -1,4 +1,4 @@
-import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
+import Snackbar from '@mui/material/Snackbar';
 
 type NotificationPopUpProps = {
     open: boolean;
