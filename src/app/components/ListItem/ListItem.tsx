@@ -93,7 +93,7 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
                 onMouseLeave={() => setHoveredProductId(null)}
             >
                 {hoveredProductId === item.id &&
-                    <div className={styles.deleteIcon} onClick={(e) => { handleRowDelete(item.id)}}>
+                    <div className={styles.deleteIcon} onClick={() => { handleRowDelete(item.id)}}>
                         <RiDeleteBinLine size={25} color="red" />
                     </div>
                 }
