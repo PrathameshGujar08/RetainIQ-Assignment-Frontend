@@ -26,7 +26,7 @@ const ItemsList = ({ productList, setProductList }: ItemsListProps) => {
         ...product,
         product_variants: product.product_variants.filter((variant, i) => i !== index)
       })));
-      setMessage("Column Successfully Deleted!")
+    setMessage("Column Successfully Deleted!")
   }
 
   const handleRowAdd = () => {
@@ -45,31 +45,33 @@ const ItemsList = ({ productList, setProductList }: ItemsListProps) => {
           value: ""
         }
       ],
-      product_variants: newVariants 
+      product_variants: newVariants
     };
 
     setProductList((prevProductList) => [...prevProductList, newProduct]);
-    setMessage("Row Successfully Added!")
+    setMessage("Row Successfully Added!");
   };
 
-  useEffect(()=>{
-    setIsNotification(true);
+  useEffect(() => {
+    if(message !== ""){
+      setIsNotification(true);
+    }
   }, [message])
 
   return (
     <div className={styles.itemsList}>
       <div className={styles.rowHeading}>
-          <div className={styles.itemsIndexDiv}>
-          </div>
-          <div className={styles.filterHeading}>
-            <h3>Product Filter</h3>
-          </div>
+        <div className={styles.itemsIndexDiv}>
+        </div>
+        <div className={styles.filterHeading}>
+          <h3>Product Filter</h3>
+        </div>
         <div className={styles.variantHeadingDiv}>
           {productList[0].product_variants.map((item, index) => (
             <div key={index} className={styles.variantHeading}>
               {index === 0 ? <h3>Primary Variant</h3> : <h3>Variant {index + 1}</h3>}
               <div style={{ cursor: "pointer" }} onClick={() => handleColumnDelete(index)}>
-                <RiDeleteBinLine size={25}/>
+                <RiDeleteBinLine size={25} />
               </div>
             </div>
           ))}
@@ -91,7 +93,7 @@ const ItemsList = ({ productList, setProductList }: ItemsListProps) => {
           <IoAddOutline size={30} />
         </div>
       </div>
-      <NotificationPopUp open={isNotification} setOpen={setIsNotification} message={message}/>
+      <NotificationPopUp open={isNotification} setOpen={setIsNotification} message={message} />
     </div>
   );
 };

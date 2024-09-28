@@ -53,7 +53,9 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
     };
 
     useEffect(() => {
-        setIsNotification(true);
+        if(message !== ""){
+            setIsNotification(true);
+        }
     }, [message])
 
     const openModal = (index: number) => {
@@ -91,10 +93,10 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
                 onMouseLeave={() => setHoveredProductId(null)}
             >
                 {hoveredProductId === item.id &&
-                    <div className={styles.deleteIcon} onClick={() => handleRowDelete(item.id)}>
+                    <div className={styles.deleteIcon} onClick={(e) => { handleRowDelete(item.id)}}>
                         <RiDeleteBinLine size={25} color="red" />
                     </div>
-                 }
+                }
                 <div className={styles.itemIndex}>
                     <h1>{index + 1}</h1>
                     <TbGridDots size={26} color="black" />
@@ -136,18 +138,19 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
                 </div>
             </div>
 
-            <div className={styles.variants}>
-                {item.product_variants.map((variant, i) => (
-                    <ScrollSyncPane key={i}>
+            <ScrollSyncPane >
+                <div className={styles.variants}>
+                    {item.product_variants.map((variant, i) => (
                         <Variants variant={variant} item={item} index={i} setProductList={setProductList} openModal={openModal} />
-                    </ScrollSyncPane>
-                ))}
-                <div style={{ margin: "4.5rem" }}>
-                    <div className={styles.addIcon} onClick={() => handleColumnAdd()}>
-                        <IoAddOutline size={30} />
+                    ))}
+                    <div style={{ margin: "4.5rem" }}>
+                        <div className={styles.addIcon} onClick={() => handleColumnAdd()}>
+                            <IoAddOutline size={30} />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ScrollSyncPane>
+            
             <Modal
                 isOpen={isModalOpen}
                 onClose={closeModal}
