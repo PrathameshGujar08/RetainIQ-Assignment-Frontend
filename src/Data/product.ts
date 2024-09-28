@@ -8,12 +8,7 @@ const ProductsList: Product[] =[
           "source": "Product Collection1",
           "condition": "contains1",
           "value": "Anarkali dress"
-        },
-        {
-          "source": "Product Collection1",
-          "condition": "contains1",
-          "value": "Anarkali dress"
-        },
+        }
       ],
       "product_variants": [
         {
@@ -53,12 +48,7 @@ const ProductsList: Product[] =[
           "source": "Product Collection3",
           "condition": "contains3",
           "value": "Anarkali dress"
-        },
-        {
-          "source": "Product Collection3",
-          "condition": "contains3",
-          "value": "Anarkali dress"
-        },
+        }
       ],
       "product_variants": [
         {
