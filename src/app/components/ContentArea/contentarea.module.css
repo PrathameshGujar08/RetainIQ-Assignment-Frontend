@@ -3,7 +3,7 @@
     width: 95vw;
     margin-left: 5vw;
     .header{
-        height: 20vh;
+        height: 10rem;
         border-bottom: 2px solid #FAFAFA;
         display: flex;
         justify-content: space-between;

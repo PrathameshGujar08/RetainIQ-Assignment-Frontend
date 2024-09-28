@@ -53,7 +53,7 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
     };
 
     useEffect(() => {
-        if(message !== ""){
+        if (message !== "") {
             setIsNotification(true);
         }
     }, [message])
@@ -88,12 +88,13 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
 
     return (
         <div className={styles.listItem} ref={setNodeRef} {...attributes} {...listeners} style={style}>
+
             <div className={styles.itemIndexDiv}
                 onMouseEnter={() => setHoveredProductId(item.id)}
                 onMouseLeave={() => setHoveredProductId(null)}
             >
                 {hoveredProductId === item.id &&
-                    <div className={styles.deleteIcon} onClick={() => { handleRowDelete(item.id)}}>
+                    <div className={styles.deleteIcon} onClick={() => { handleRowDelete(item.id) }}>
                         <RiDeleteBinLine size={25} color="red" />
                     </div>
                 }
@@ -141,7 +142,7 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
             <ScrollSyncPane >
                 <div className={styles.variants}>
                     {item.product_variants.map((variant, i) => (
-                        <Variants key={i*i} variant={variant} item={item} index={i} setProductList={setProductList} openModal={openModal} />
+                        <Variants key={i * i} variant={variant} item={item} index={i} setProductList={setProductList} openModal={openModal} />
                     ))}
                     <div style={{ margin: "4.5rem" }}>
                         <div className={styles.addIcon} onClick={() => handleColumnAdd()}>
@@ -150,7 +151,7 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
                     </div>
                 </div>
             </ScrollSyncPane>
-            
+
             <Modal
                 isOpen={isModalOpen}
                 onClose={closeModal}

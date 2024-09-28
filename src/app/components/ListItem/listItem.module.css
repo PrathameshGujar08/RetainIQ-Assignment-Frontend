@@ -1,120 +1,129 @@
-.listItem{
+.listItem {
     display: flex;
     margin-bottom: 1rem;
-    .itemIndexDiv{
-        padding: 1.5rem ;
-        height: 14rem;
-        border-right: 2px solid #E5E5E5;
-        align-items: center;      
-        justify-content: center; 
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        .itemIndex{
-            display: flex;
-            flex-direction: row;
+
+        .itemIndexDiv {
+            padding: 1.5rem;
+            height: 14rem;
+            border-right: 2px solid #E5E5E5;
             align-items: center;
-            width: 3rem;   
-        }
-    }
-
-    .filterContainer {
-        padding: 1rem 1rem 1rem 2rem;
-        height: 14rem;
-        border-right: 2px solid #E5E5E5;
-
-        .filterDiv {
+            justify-content: center;
+            position: relative;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            height: 12rem;
-            width: 25rem;
-            border: 2px dashed #E5E5E5;
-            border-radius: 0.5rem;
-            background-color: white;
-            justify-content: center;
 
-            .filter {
+            .itemIndex {
                 display: flex;
-                gap: 0.5rem;
-                justify-content: center;
-                position: relative;
-
-                .filterName,
-                .filterCondition {
-                    border: 2px solid #E5E5E5;
-                    border-radius: 0.3rem;
-                    font-size: small;
-                    font-weight: 600;
-                    padding: 0.4rem;
-                    transition: transform 0.2s ease-in-out;
-                }
-
-                .filterCondition {
-                    border: 2px solid #C4EAD7;
-                    background-color: #EDFFF2;
-                    color: #16774F;
-                    transition: transform 0.2s ease-in-out;
-                }
-                &:hover .zoomBox {
-                    display: block;
-                }
-                .zoomBox {
-                    display: none;
-                    position: absolute;
-                    top: 50%;
-                    left: -1rem;
-                    width: 30rem;
-                    height: 6rem;
-                    transform: translateY(-50%);
-                    padding: 1rem;
-                    border: 2px solid #E5E5E5;
-                    border-radius: 0.5rem;
-                    background-color: white;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    z-index: 10;
-                    padding: 1.5rem;
-                    
-                    .zoomContainer{
-                        display: flex;
-                        gap: 0.5rem;
-                        justify-content: center;
-                        align-items: center;
-                        border: 2px solid #E5E5E5;
-                        padding: 0.6rem;
-                        .zoomedFilter {
-                            display: flex;
-                            gap: 0.5rem;
-                            transition: transform 0.2s ease-in-out;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                    }
-                }
-
+                flex-direction: row;
+                align-items: center;
+                width: 3rem;
             }
         }
-    }
 
-    .variants{
+        .filterContainer {
+            padding: 1rem 1rem 1rem 2rem;
+            height: 14rem;
+            border-right: 2px solid #E5E5E5;
+
+            .filterDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                height: 12rem;
+                width: 25rem;
+                border: 2px dashed #E5E5E5;
+                border-radius: 0.5rem;
+                background-color: white;
+                justify-content: center;
+
+                .filter {
+                    display: flex;
+                    gap: 0.5rem;
+                    justify-content: center;
+                    position: relative;
+
+                    .filterName,
+                    .filterCondition {
+                        border: 2px solid #E5E5E5;
+                        border-radius: 0.3rem;
+                        font-size: small;
+                        font-weight: 600;
+                        padding: 0.4rem;
+                        transition: transform 0.2s ease-in-out;
+                    }
+
+                    .filterCondition {
+                        border: 2px solid #C4EAD7;
+                        background-color: #EDFFF2;
+                        color: #16774F;
+                        transition: transform 0.2s ease-in-out;
+                    }
+
+                    &:hover .zoomBox {
+                        display: block;
+                    }
+
+                    .zoomBox {
+                        display: none;
+                        position: absolute;
+                        top: 50%;
+                        left: -1rem;
+                        width: 30rem;
+                        height: 6rem;
+                        transform: translateY(-50%);
+                        padding: 1rem;
+                        border: 2px solid #E5E5E5;
+                        border-radius: 0.5rem;
+                        background-color: white;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        z-index: 10;
+                        padding: 1.5rem;
+
+                        .zoomContainer {
+                            display: flex;
+                            gap: 0.5rem;
+                            justify-content: center;
+                            align-items: center;
+                            border: 2px solid #E5E5E5;
+                            padding: 0.6rem;
+
+                            .zoomedFilter {
+                                display: flex;
+                                gap: 0.5rem;
+                                transition: transform 0.2s ease-in-out;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+    .variants {
         display: flex;
         overflow-x: auto;
-        .imageContainer{
+
+        .imageContainer {
             padding: 1rem 1rem 1rem 2rem;
             border-right: 2px solid #E5E5E5;
             height: 14rem;
-            .itemImageDiv{
+
+            .itemImageDiv {
                 /* height: 11rem; */
                 width: 11rem;
                 height: 12rem;
                 border: 2px dashed #E5E5E5;
                 border-radius: 0.5rem;
                 background-color: white;
-                .img{
+
+                .img {
                     margin: 1rem 2rem 0 2rem;
                     border-radius: 0.5rem;
                 }
-                .caption{
+
+                .caption {
                     text-align: center;
                     font-size: 0.8rem;
                     font-weight: 550;
@@ -122,6 +131,7 @@
                 }
             }
         }
+
         .addIcon {
             background-color: white;
             border: 2px solid #E5E5E5;
@@ -134,14 +144,15 @@
             cursor: pointer;
         }
     }
+
     .insertIconDiv {
         display: flex;
         height: 100%;
         align-items: center;
         justify-content: center;
-    
+
     }
-    
+
     .insertDisplay {
         background-color: white;
         border: 2px solid #E5E5E5;
