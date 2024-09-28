@@ -141,7 +141,7 @@ const ListItem = ({ item, index, setProductList }: ListItemProps) => {
             <ScrollSyncPane >
                 <div className={styles.variants}>
                     {item.product_variants.map((variant, i) => (
-                        <Variants variant={variant} item={item} index={i} setProductList={setProductList} openModal={openModal} />
+                        <Variants key={i*i} variant={variant} item={item} index={i} setProductList={setProductList} openModal={openModal} />
                     ))}
                     <div style={{ margin: "4.5rem" }}>
                         <div className={styles.addIcon} onClick={() => handleColumnAdd()}>
