@@ -8,6 +8,7 @@ import { Product } from '../../../Types/types';
 import { IoAddOutline } from 'react-icons/io5'
 import { RiDeleteBinLine } from "react-icons/ri";
 import NotificationPopUp from '../NotificationPopUp/NotificationPopUp';
+import { ScrollSyncPane } from 'react-scroll-sync';
 
 
 interface ItemsListProps {
@@ -53,7 +54,7 @@ const ItemsList = ({ productList, setProductList }: ItemsListProps) => {
   };
 
   useEffect(() => {
-    if(message !== ""){
+    if (message !== "") {
       setIsNotification(true);
     }
   }, [message])
@@ -66,27 +67,34 @@ const ItemsList = ({ productList, setProductList }: ItemsListProps) => {
         <div className={styles.filterHeading}>
           <h3>Product Filter</h3>
         </div>
-        <div className={styles.variantHeadingDiv}>
-          {productList[0].product_variants.map((item, index) => (
-            <div key={index} className={styles.variantHeading}>
-              {index === 0 ? <h3>Primary Variant</h3> : <h3>Variant {index + 1}</h3>}
-              <div style={{ cursor: "pointer" }} onClick={() => handleColumnDelete(index)}>
-                <RiDeleteBinLine size={25} />
+        <ScrollSyncPane>
+          <div className={styles.variantHeadingDiv}>
+            {productList[0].product_variants.map((item, index) => (
+              <div key={index} className={styles.variantHeading}>
+                {index === 0 ? <h3>Primary Variant</h3> : <h3>Variant {index + 1}</h3>}
+                <div style={{ cursor: "pointer" }} onClick={() => handleColumnDelete(index)}>
+                  <RiDeleteBinLine size={25} />
+                </div>
               </div>
+            ))}
+            <div className={styles.placeholderDiv}>
             </div>
-          ))}
-          <div className={styles.placeholderDiv}>
           </div>
-        </div>
+        </ScrollSyncPane>
+
       </div>
 
-      <SortableContext items={productList.map(product => product.id)} strategy={verticalListSortingStrategy}>
-        {productList.map((item, index) => (
-          <React.Fragment key={item.id}>
-            <ListItem index={index} item={item} setProductList={setProductList} />
-          </React.Fragment>
-        ))}
-      </SortableContext>
+      {/* <ScrollSync> */}
+        <div className={styles.girdDiv}>
+          <SortableContext items={productList.map(product => product.id)} strategy={verticalListSortingStrategy}>
+            {productList.map((item, index) => (
+              <React.Fragment key={item.id}>
+                <ListItem index={index} item={item} setProductList={setProductList} />
+              </React.Fragment>
+            ))}
+          </SortableContext>
+        </div>
+      {/* </ScrollSync> */}
 
       <div style={{ margin: "1.5rem" }}>
         <div className={styles.addIcon} onClick={() => handleRowAdd()}>

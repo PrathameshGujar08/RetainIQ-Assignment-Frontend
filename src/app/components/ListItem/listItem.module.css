@@ -104,7 +104,7 @@
     .variants {
         display: flex;
         overflow-x: auto;
-
+        scrollbar-width: none;
         .imageContainer {
             padding: 1rem 1rem 1rem 2rem;
             border-right: 2px solid #E5E5E5;

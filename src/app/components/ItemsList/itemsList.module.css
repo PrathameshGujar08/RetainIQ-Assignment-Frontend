@@ -30,6 +30,7 @@
             display: flex;
             width: auto;
             flex-grow: 1;
+            scrollbar-width: none;
         }
         .variantHeading {
             display: flex;
